@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viva Sorte</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+<script>
+  window.pixelId = "683ca6aaefc53b26164eb525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Captura todos os links na página
+    const links = document.querySelectorAll('a');
+
+    // Função para verificar e salvar parâmetros UTM no localStorage
+    function checkAndSaveUtmParams() {
+      // Obtém os parâmetros da URL atual
+      let currentParams = new URLSearchParams(window.location.search);
+
+      // Verifica se já existem parâmetros UTM no localStorage
+      let storedParams = localStorage.getItem('utmParams');
+      if (!storedParams) {
+        // Se não existirem, adiciona os parâmetros da URL atual ao localStorage
+        let utmParams = {};
+        for (let [key, value] of currentParams.entries()) {
+          if (key.startsWith('utm_')) {
+            utmParams[key] = value;
+          }
+        }
+        if (Object.keys(utmParams).length > 0) {
+          localStorage.setItem('utmParams', JSON.stringify(utmParams));
+        }
+      }
+    }
+
+    // Chama a função para verificar e salvar parâmetros UTM
+    checkAndSaveUtmParams();
+
+    // Adiciona um ouvinte de eventos a cada link
+    links.forEach(link => {
+      link.addEventListener('click', function (event) {
+        // Previne o comportamento padrão do link
+        event.preventDefault();
+
+        // Obtém a URL de destino do atributo href do link
+        let destinationUrl = this.getAttribute('href');
+
+        // Cria um objeto URL para a URL de destino, resolvendo-a em relação à URL atual
+        let url = new URL(destinationUrl, window.location.href);
+
+        // Verifica se já existem parâmetros UTM no localStorage
+        let storedParams = localStorage.getItem('utmParams');
+        if (storedParams) {
+          // Se existirem, adiciona-os à URL de destino
+          let storedParamsObj = JSON.parse(storedParams);
+          for (let [key, value] of Object.entries(storedParamsObj)) {
+            url.searchParams.append(key, value);
+          }
+        }
+
+        // Redireciona para a nova URL
+        window.location.href = url.toString();
+      });
+    });
+  });
+</script></head>
+
+
+
+
+<body>
+
+   
+
+  
+    <meta charset="utf-8">
+  
+    <div class="topo">
+        <img src="images/logo.png">
+    </div>
+
+<div class="banner">
+
+
+<div class="container-banner">
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="tag-compre-agora">
+            <span>Compre agora!</span>
+          </div>
+    </div>
+        
+        <video autoplay="" loop="" muted="" playsinline="" class="d-block w-100" style="border-radius: 15px;">
+         <source src="media/Viva-sorte-02.mp4" type="video/mp4">
+             <!-- Fallback da imagem, apenas se o vídeo não for suportado -->
+         <img src="images/11-de-maio.gif" class="d-block w-100" alt="" style="display:none;">
+        </video>
+      </div>
+    </div>
+
+<!--
+    <div class="infos-banner">
+            <h1>Viva Sorte - 02/06/2024</h1> 
+            <h2>DOM, 02 JUN | 2024</h2> 
+            <h3>PORSCHE + BMW + RAM POR APENAS 99 CENTAVOS!</h3>        
+    </div>
+-->
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+    <div class="sorteio-date w-100 text-center">
+      <h1>Sorteio em <span style="background-color: #f0ad4e;" id="contador">DOM, 01 JUN | 2025</span> por apenas <span style="background-color: #2f4eb5;">R$0,99</span> </h1>
+    </div>
+
+<script>
+function atualizarContador() {
+    // Obter o elemento span pelo ID
+    var span = document.getElementById('contador');
+
+    // Definir a data limite para 18 de maio de 2025
+    var dataLimite = new Date("2025-06-01T20:30:00");
+
+    // Formatar a data
+    var diasSemana = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SÁB"];
+    var meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+    var diaSemana = diasSemana[dataLimite.getDay()];
+    var dia = String(dataLimite.getDate()).padStart(2, '0');
+    var mes = meses[dataLimite.getMonth()];
+    var ano = dataLimite.getFullYear();
+
+    // Formatar a mensagem da data
+    var mensagemData = `${diaSemana}, ${dia} ${mes} | ${ano}`;
+
+    // Atualizar o conteúdo do span
+    span.textContent = mensagemData;
+}
+
+// Chamar a função para atualizar o contador quando a página carregar
+atualizarContador();
+</script>
+
+<div class="container-principal">
+    <span id="contador" style="font-weight: bold; font-size: 20px; color: #f4a500;"></span>
+</div>
+
+
+    <!-- BANNER -->
+
+    <!-- COTAS -->
+
+    <div class="cotas">
+
+      <div class="cotas-one">
+                  <button type="button" class="cota" onclick="selecionarValor(20)">
+            <div class="cota-qtd">                    
+                +20
+            </div>
+            <h1>R$19,85</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+
+        <button type="button" class="cota" onclick="selecionarValor(30)">
+            <div class="cota-qtd">
+                +30
+            </div>
+            <h1>R$29,70</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+
+        <button type="button" class="cota" onclick="selecionarValor(40)">
+            <div class="cota-qtd">
+            +40
+            </div>
+            <h1>R$39,60</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+
+        
+
+      </div>
+
+      <div class="cotas-one">
+          
+          <button type="button" class="cota" onclick="selecionarValor(70)">
+            <i class="bi bi-star-fill destaque"></i>
+            <div class="cota-qtd">
+            +70
+            </div>
+            <h1>R$69,30</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+
+        
+
+        <button type="button" class="cota" onclick="selecionarValor(100)">
+            <div class="cota-qtd">
+            +100
+            </div>
+            <h1>R$99,00</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+        
+        <button type="button" class="cota" onclick="selecionarValor(200)">
+            <div class="cota-qtd">
+            +200
+            </div>
+            <h1>R$198,00</h1>
+            <h2>SELECIONAR</h2>
+        </button>
+
+
+
+      </div>
+
+    </div>
+
+  
+
+  <div class="container-principal">
+
+  <div class="contador-cotas">
+        <span>
+            <button type="button" class="btn-contador-cotas" onclick="decrementar()">-</button>
+        </span>
+        <input type="number" id="numero" class="input-contador-cotas" value="0" min="0" oninput="highlightButton()">
+        <span>
+            <button type="button" class="btn-contador-cotas" onclick="incrementar()">+</button>
+        </span>
+    </div>
+
+    <button type="button" id="btn-adicionar-carrinho" class="adc-carrinho" onclick="adicionarAoCarrinho()" disabled="">
+        <i class="bi bi-cart-fill"></i> COMPRAR TÍTULOS
+    </button>
+
+
+
+  <div class="sorteio-date w-100 text-center" style="margin-top: 5px;">
+    <br>
+    <h1 style="font-size: 0.72rem;">Comprar mais títulos aumenta suas chances de ganhar!</h1>
+
+    <div class="container-principal">
+      <div class="hospital">
+
+        <div class="card-hospital">
+            <div class="card-hospital-image">
+                <img src="images/logo-hospital.svg">
+                <h2>Instituição beneficiada</h2>
+            </div>
+            <div class="card-hospital-text">
+                <p>O Hospital do Câncer de Londrina, fundado em 08 de novembro de 1965 por Lucilla Pinto Ballalai, foi originalmente chamado Centro Norte Paranaense de Pesquisas Médicas. Criado com o objetivo de melhorar o tratamento do câncer e a qualidade de vida, o hospital focava inicialmente na prevenção do câncer de colo de útero entre as mulheres de Londrina e região. A instituição sempre buscou aprimorar seus recursos humanos, científicos e tecnológicos.</p>
+            </div>
+        </div>
+        
+        <div class="card-hospital card-hospital-bg-azul">
+            <div class="card-hospital-image">
+                <img src="images/viva-hosp.svg">
+                <h2>Viva Privilégios</h2>
+            </div>
+            <div class="card-hospital-text">
+                <p>Viva Privilégios, um programa que enriquece sua vida com acesso � saúde, alimentação, transporte e mais. Com cada compra, acumule pontos para trocar por consultas médicas, receber cashback, e utilizar serviços de telefonia e apps de transporte e alimentação. Eleve sua qualidade de vida e desfrute de mais conveniência e economia!</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  
+  <link href="css/rodape.css" rel="stylesheet">
+
+
+<div class="rodape">
+    <div class="container-principal">
+        <img class="logo-rodape" src="images/logo.png">
+
+        <div class="redes">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-youtube"></i>
+        </div>
+
+        <h1>Sorteios lastreados por Títulos de Capitalização, da Modalidade Incentivo, emitidos pela VIA Capitalização S.A, inscrita no CNPJ sob nº 88.076.302/0001-94, e aprovados pela SUSEP através do registro na SUSEP Sorteio n° 15414.652257/2023-51. O valor das premiações aqui indicados são líquidos, já descontado o devido imposto de renda de 25%. O registro deste plano na SUSEP não implica, por parte da Autarquia, incentivo ou recomendação a sua comercialização.</h1>
+        
+        <div class="linha-rodape"></div>
+
+        <div class="patterns-rodape">
+            <div class="pattern-rodape">
+                Títulos emitidos por:
+                <img src="images/viacap.png">
+            </div>
+
+            <div class="pattern-rodape">
+                Promoção realizada por:
+                <img src="images/viva.png">
+            </div>
+
+            <div class="pattern-rodape">
+                Desenvolvimento:
+                <img src="images/edjdigital.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- BOTÃO + E - -->
+  <script>
+    const precoPorUnidade = 0.99;
+
+    function incrementar() {
+        var input = document.getElementById('numero');
+        var valorAtual = parseInt(input.value);
+        if (valorAtual < 200) {
+            if (valorAtual === 0) {
+                input.value = 20;
+            } else if (valorAtual === 20) {
+                input.value = 30;
+            } else if (valorAtual === 30) {
+                input.value = 40;
+            } else if (valorAtual === 40) {
+                input.value = 70;
+            } else if (valorAtual === 70) {
+                input.value = 100;
+            } else if (valorAtual === 100) {
+                input.value = 200;
+            }
+        }
+        highlightButton();
+    }
+
+    function decrementar() {
+        var input = document.getElementById('numero');
+        var valorAtual = parseInt(input.value);
+        if (valorAtual > 20) {
+            if (valorAtual === 200) {
+                input.value = 100;
+            } else if (valorAtual === 100) {
+                input.value = 70;
+            } else if (valorAtual === 70) {
+                input.value = 40;
+            } else if (valorAtual === 40) {
+                input.value = 30;
+            } else if (valorAtual === 30) {
+                input.value = 20;
+            }
+        }
+        highlightButton();
+    }
+
+    function highlightButton() {
+        var input = document.getElementById('numero');
+        var valorAtual = parseInt(input.value);
+        var botoesCotas = document.querySelectorAll('.cota');
+        var botaoAdicionarCarrinho = document.getElementById('btn-adicionar-carrinho');
+        var valorTotal = document.getElementById('valor-total');
+        var link;
+
+        botoesCotas.forEach(function (botao) {
+            botao.classList.remove('cota-selected');
+            var valorBotao = parseInt(botao.querySelector('.cota-qtd').innerText.trim());
+            if (valorBotao === valorAtual) {
+                botao.classList.add('cota-selected');
+                switch (valorBotao) {
+                    case 20:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW4V";
+                        break;
+                    case 30:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW51";
+                        break;
+                    case 40:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW52";
+                        break;
+                    case 70:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW53";
+                        break;
+                    case 100:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW54";
+                        break;
+                    case 200:
+                        link = "https://checkout.galenicapharma.com.br/VCCL1O8SBW55";
+                        break;
+                
+                    default:
+                        break;
+                }
+                botaoAdicionarCarrinho.setAttribute('onclick', 'adicionarAoCarrinho("' + link + '")');
+            }
+        });
+
+        if (valorAtual === 0) {
+            botaoAdicionarCarrinho.disabled = true;
+            valorTotal.innerText = "R$ 0,00";
+        } else {
+            botaoAdicionarCarrinho.disabled = false;
+            valorTotal.innerText = "R$ " + (valorAtual * precoPorUnidade).toFixed(2).replace('.', ',');
+        }
+    }
+
+    function selecionarValor(valor) {
+        var input = document.getElementById('numero');
+        input.value = valor;
+        highlightButton();
+    }
+
+    function adicionarAoCarrinho(link) {
+        window.location.href = link + window.location.search;
+    }
+
+    document.getElementById('numero').addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, ''); // Apenas números permitidos
+        var valor = parseInt(this.value);
+        if (valor > 500) {
+            this.value = 500;
+        } else if (valor < 10) {
+            this.value = 0;
+        } else if (valor % 10 !== 0) {
+            this.value = Math.floor(valor / 10) * 10;
+        }
+        highlightButton();
+    });
+
+</script>
+
+
+  <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+
+
+
+</body></html>
